@@ -60,8 +60,8 @@ function updateCurrentPlayer () {
     currentPlayer = nextPlayer.playerName;
     
     // modify border class to indicate current player webpage
-    prevPlayer.flag.classList.remove('borderplayer');
-    nextPlayer.flag.classList.add('borderplayer');
+    prevPlayer.flag.style.border ="";
+    nextPlayer.flag.style.border ="5px solid rgb(0, 255, 0)";
 };
 
 function checkWon (checkPlayer) {
@@ -284,6 +284,8 @@ function gameInitialise () {
     gamePartInitialise();
     
     updateScoreBoard();
+    
+    updateCurrentPlayer();
     
     for (let i = 0; i < boxArray.length; i++){
         for (let j = 0; j < boxArray[0].length; j++){
